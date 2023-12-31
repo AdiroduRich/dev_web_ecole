@@ -9,11 +9,10 @@
 </head>
 <body style="margin: 0px;">
 
-    <div style="background:orange; border-radius: 0px 0px 40% 40%; padding: 50px 0px;">
-        <h2 style="text-align: center;">GESTION DES ETUDIANTS<h2>
-    </div>
+    <?php include_once("components/header.php"); ?>
 
     <div style="padding: 0px 20px">
+        <a href="../index.php">RETOUR</a>
 
         <h2 style="text-align:center">Ajouter un étudiant</h2>
 
@@ -45,12 +44,12 @@
                             <option value="L1">L1</option>
                             <option value="L2 A">L2 A</option>
                             <option value="L2 B">L2 B</option>
-                            <option value="L3 DSN">L3 DSN</option>
+                            <option value="L3 DSG">L3 DSG</option>
                             <option value="L3 MSI">L3 MSI</option>
                             <option value="L3 GL">L3 GL</option>
                             <option value="L3 AS">L3 AS</option>
                             <option value="L3 TLC">L3 TLC</option>
-                            <option value="L4 DSN">L4 DSN</option>
+                            <option value="L4 DSG">L4 DSG</option>
                             <option value="L4 MSI">L4 MSI</option>
                             <option value="L4 GL">L4 GL</option>
                             <option value="L4 AS">L4 AS</option>
@@ -76,11 +75,18 @@
                 <tr>
                     <th></th>
                     <td>
-                        <button type="submit" class="btn">ENREGISTRER</button>
+                        <button type="submit" id="addBtn" class="btn">ENREGISTRER</button>
                     </td>
                 </tr>
 
             </table>    
     </div>
+
+    <script>
+        var addBtn =document.getElementById('addBtn');
+        addBtn.addEventListener('click', (e)=>{
+            window.alert("Etudiant ajouté avec succès");
+        });
+    </script>
 </body>
 </html>
